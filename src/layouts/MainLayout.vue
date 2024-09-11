@@ -14,12 +14,12 @@
         <q-toolbar-title>
           Inventory Management
         </q-toolbar-title>
-        <dIv> 
+        <dIv>
           <q-icon name="notifications" class="q-ma-sm" size="md"/>
           <q-icon name="person" class="q-ma-sm" size="md"/>
           Noella
         </dIv>
-        
+
       </q-toolbar>
     </q-header>
 
@@ -79,10 +79,10 @@ const linksList = [
     link: 'dashboard'
   },
   {
-    title: 'Inventory',
+    title: 'Products',
     // caption: 'github.com/quasarframework',
     icon: 'inventory',
-    link: 'inventory'
+    link: 'products'
   },
   {
     title: 'Suppliers',

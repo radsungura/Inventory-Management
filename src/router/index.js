@@ -28,3 +28,5 @@ export default route(function (/* { store, ssrContext } */) {
 
   return Router
 })
+
+
