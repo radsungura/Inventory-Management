@@ -54,7 +54,7 @@
               style="border: 2px solid green"
               label="Free trial"
               glossy
-              href="http://localhost:8020/Dashboard"
+              href="https://inventapi.onrender.com/api/users"
             />
           </q-tabs>
         </q-toolbar>
@@ -155,7 +155,7 @@
             with Inventory Plus
             <br />
             <br />
-            Link: http://localhost:8020/Dashboard
+            Link: <a>href="https://inventapi.onrender.com/api/"</a>
           </h5>
         </div>
       </div>
@@ -196,6 +196,10 @@
         </div>
       </div>
     </div>
+
+
+
+
     <div style="background-color: #14104e" id="id_sponsors">
       <div class="row row q-px-xl">
         <div
@@ -220,6 +224,32 @@
       </div>
       <canvas id="canvas2" style="height: 100%; width: 100%"></canvas>
     </section>
+
+    <div class="text-caption text-grey-9">
+      <q-card-section class="q-py-xs">
+        <div class="text-h5 q-mt-sm q-mb-xs">
+          Name: Noella Jarega
+          <br>
+          Github:<a class="project_link" style="text-decoration: none;color: #eb4f71;"
+          href="https://github.com/Noella-68?tab=repositories" target="_blank">link </a>
+          <br>
+          Linkedin: <a class="project_link" style="text-decoration: none;color: #eb4f71 ;"
+                       href="https://www.linkedin.com/in/noella-jarega-a308261b9/" target="_blank" >Link </a>
+          <br>
+          <br>
+          Name: Rad Sungura
+          <br>
+          Github: <a class="project_link" style="text-decoration: none;color: #eb4f71;"
+                     href="https://github.com/radsungura/inventAPI" target="_blank">link </a>
+        </div>
+
+
+      </q-card-section>
+    </div>
+
+
+
+
     <div id="contact_us">
       <div style="background-color: rgba(0, 0, 0, 0.68) !important">
         <form action="https://formspree.io/mpzydoze" method="POST">
