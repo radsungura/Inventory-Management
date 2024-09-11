@@ -1,12 +1,12 @@
 import { boot } from "quasar/wrappers";
 import axios from "axios";
 
-const baseURL = "http://localhost:4000/api/";
+const baseURL = "https://inventapi.onrender.com/api/";
 
 // Be careful when using SSR for cross-request state pollution
 // due to creating a Singleton instance here;
 // If any client changes this (global) instance, it might be a
-// good idea to move this instance creation inside of the
+// good idea to move this instance creation inside the
 // "export default () => {}" function below (which runs individually
 // for each client)
 const api = axios.create({
