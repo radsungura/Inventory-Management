@@ -1,15 +1,12 @@
-import {defineStore} from 'pinia';
-import {api} from "boot/axios";
-import {appendEditForm, appendForm} from "src/Utilities/formhelpers";
+import { defineStore } from "pinia";
+import { api } from "boot/axios";
+import { appendEditForm, appendForm } from "src/Utilities/formhelpers";
 
-
-export const useProductsStore = defineStore('products', {
+export const useProductsStore = defineStore("products", {
   state: () => ({
-    products: [],  //State (holds data)
+    products: [], //State (holds data)
     fetchingProducts: false, // Boolean state
   }),
-
-
 
   // Returns data in the state
   getters: {
@@ -20,47 +17,41 @@ export const useProductsStore = defineStore('products', {
   // Actions are interactions with BE ie get , Post
   actions: {
     fetchProducts() {
-      this.fetchingProducts = true
-      return new Promise((resolve, reject) => {   //function for loading data that takes time is promise
+      this.fetchingProducts = true;
+      return new Promise((resolve, reject) => {
+        //function for loading data that takes time is promise
         api
-          .get('products/get')
+          .get("products/get")
           .then((response) => {
-            this.products = response.data
-            this.fetchingProducts = false
-            resolve(response)
+            this.products = response.data;
+            this.fetchingProducts = false;
+            resolve(response);
           })
           .catch((error) => {
-            this.fetchingProducts = false
-            reject(error)
-          })
-      })
-
+            this.fetchingProducts = false;
+            reject(error);
+          });
+      });
     },
-
-
 
     addProducts(form) {
       return new Promise((resolve, reject) => {
         api
-          .post('api/products/add', appendForm(form))
+          .post("api/products/add", appendForm(form))
           .then((response) => resolve(response))
-          .catch((error) => reject(error))
-      })
+          .catch((error) => reject(error));
+      });
     },
 
     updateProducts(form) {
       return new Promise((resolve, reject) => {
         api
-      .post(`set/${form.id}`, appendEditForm(form))
+          .post(`set/${form.id}`, appendEditForm(form))
           .then((response) => resolve(response))
-          .catch((error) => reject(error))
-      })
+          .catch((error) => reject(error));
+      });
     },
-
-
-
   },
-
 });
 
 //entire store calls the endpoint

@@ -1,7 +1,7 @@
-import {defineStore} from 'pinia';
-import {api} from "boot/axios";
+import { defineStore } from "pinia";
+import { api } from "boot/axios";
 
-export const useUsersStore = defineStore('users', {
+export const useUsersStore = defineStore("users", {
   state: () => ({
     users: [],
     fetchingUsers: false,
@@ -14,22 +14,20 @@ export const useUsersStore = defineStore('users', {
 
   actions: {
     fetchUsers() {
-      this.fetchingUsers = true
+      this.fetchingUsers = true;
       return new Promise((resolve, reject) => {
         api
-          .get('users/get')
+          .get("users/get")
           .then((response) => {
-            this.users = response.data
-            this.fetchingUsers = false
-            resolve(response)
+            this.users = response.data;
+            this.fetchingUsers = false;
+            resolve(response);
           })
           .catch((error) => {
-            this.fetchingUsers = false
-            reject(error)
-          })
-      })
+            this.fetchingUsers = false;
+            reject(error);
+          });
+      });
     },
-
   },
-
 });

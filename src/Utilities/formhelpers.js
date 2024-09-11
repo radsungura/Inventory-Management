@@ -1,29 +1,29 @@
 export const appendForm = function (form) {
-  const formData = new FormData()
+  const formData = new FormData();
 
   for (const key in form) {
     if (Array.isArray(form[key])) {
-      formData.append(key, JSON.stringify(form[key]))
+      formData.append(key, JSON.stringify(form[key]));
     } else {
-      formData.append(key, form[key])
+      formData.append(key, form[key]);
     }
   }
 
-  return formData
-}
+  return formData;
+};
 
 export const appendEditForm = function (form) {
-  const formData = new FormData()
+  const formData = new FormData();
 
   for (const key in form) {
     if (Array.isArray(form[key])) {
-      formData.append(key, JSON.stringify(form[key]))
+      formData.append(key, JSON.stringify(form[key]));
     } else {
-      formData.append(key, form[key])
+      formData.append(key, form[key]);
     }
   }
 
-  formData.append('_method', 'put')
+  formData.append("_method", "put");
 
-  return formData
-}
+  return formData;
+};

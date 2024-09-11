@@ -2,7 +2,7 @@ export const showNotification = (
   $q,
   type,
   message,
-  position = 'top-right',
+  position = "top-right",
   timeout = 5000
 ) =>
   $q.notify({
@@ -10,4 +10,4 @@ export const showNotification = (
     message: message,
     position: position,
     timeout: timeout,
-  })
+  });
