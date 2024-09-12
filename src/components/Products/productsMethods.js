@@ -50,9 +50,9 @@ export default function productsMethods() {
         submitting.value = true;
 
         if (actionEdit) {
-          updateProductAction(emitSuccess());
+          updateProductAction(emitSuccess);
         } else {
-          addProductAction(emitSuccess());
+          addProductAction(emitSuccess);
 
         }
       } else {
@@ -68,7 +68,7 @@ export default function productsMethods() {
       .addProducts(addProductsForm.value)
       .then(() => {
         submitting.value = false;
-        showNotification($q, "positive", "Task Saved");
+        showNotification($q, "positive", "Product Saved");
         actionFetchProductsData();
         emitSuccess();
       })

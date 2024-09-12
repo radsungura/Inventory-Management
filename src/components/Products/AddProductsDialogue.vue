@@ -91,7 +91,7 @@
         :loading="submitting"
         :disabled="submitting"
         color="primary"
-        @click="btnSaveProduct(isEditing , emitSuccess)"
+        @click="btnSaveProduct(isEditing, emitSuccess)"
       />
     </q-card-actions>
   </q-card>
