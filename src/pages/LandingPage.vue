@@ -197,7 +197,31 @@
       </div>
     </div>
 
+  <div style="background-color: #2b5873" id="id_projects">
+      <div class="row q-px-xl">
+        <div
+          class="text-h4 text-center text-white q-py-sm q-my-md full-width"
+          style="
+            border-top: 3px solid #bdbdbd;
+            border-bottom: 3px solid #bdbdbd;
+          "
+          id="id_features"
+        >
+          DEMO
+        </div>
 
+        <div
+          class="col-md-12 col-md-12 col-xs-12 col-sm-12 q-mb-xl flex flex-center"
+        >
+          <video
+            src="/Images/demo.mp4"
+            style="height: 500px"
+            class="q-ml-sm"
+            alt="application demo"
+          />
+        </div>
+      </div>
+    </div>
 
 
     <div style="background-color: #14104e" id="id_sponsors">
