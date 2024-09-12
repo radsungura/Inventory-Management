@@ -54,7 +54,7 @@
               style="border: 2px solid green"
               label="Free trial"
               glossy
-              href="dashboard"
+              href="https://inventapi.onrender.com/api/products/get"
             />
           </q-tabs>
         </q-toolbar>
