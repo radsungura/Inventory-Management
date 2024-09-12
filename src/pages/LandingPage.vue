@@ -213,16 +213,13 @@
         <div
           class="col-md-12 col-md-12 col-xs-12 col-sm-12 q-mb-xl flex flex-center"
         >
-          <video
-            src="/Images/demo.mp4"
+
+          <video 
+             src="/Images/demo.mp4"
             style="height: 500px"
             class="q-ml-sm"
             alt="application demo"
-          />
-          Your browser does not support the video tag.
-        </video>
-
-          <video width="320" height="240" controls>
+            controls>
             <source src="/Images/demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
