@@ -219,6 +219,8 @@
             class="q-ml-sm"
             alt="application demo"
           />
+          Your browser does not support the video tag.
+        </video>
         </div>
       </div>
     </div>
