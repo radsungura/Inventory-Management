@@ -240,7 +240,7 @@
           Name: Aime RUKUNDO
           <br>
           Github: <a class="project_link" style="text-decoration: none;color: #eb4f71;"
-                     href="https://github.com/radsungura" target="_blank">Link</a>
+                     href="https://github.com/radsungura" target="_blank">Link</a> <br>
           Linkedin: <a class="project_link" style="text-decoration: none;color: #eb4f71;" href="https://www.linkedin.com/in/aimeruk/">Link</a>
         </div>
 
