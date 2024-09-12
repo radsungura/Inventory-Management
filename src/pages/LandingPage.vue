@@ -215,7 +215,6 @@
         >
 
           <video 
-             src="/Images/demo.mp4"
             style="height: 500px"
             class="q-ml-sm"
             alt="application demo"
