@@ -237,10 +237,11 @@
                        href="https://www.linkedin.com/in/noella-jarega-a308261b9/" target="_blank" >Link </a>
           <br>
           <br>
-          Name: Rad Sungura
+          Name: Aime RUKUNDO
           <br>
           Github: <a class="project_link" style="text-decoration: none;color: #eb4f71;"
-                     href="https://github.com/radsungura/inventAPI" target="_blank">link </a>
+                     href="https://github.com/radsungura" target="_blank">Link</a>
+          Linkedin: <a class="project_link" style="text-decoration: none;color: #eb4f71;" href="https://www.linkedin.com/in/aimeruk/">Link</a>
         </div>
 
 
