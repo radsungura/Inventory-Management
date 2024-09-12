@@ -54,7 +54,7 @@
     </q-table>
 
     <q-dialog v-model="showAddProductsDialogue">
-      <AddProductsDialogue></AddProductsDialogue>
+      <AddProductsDialogue @success="showAddProductsDialogue =false"> </AddProductsDialogue>
     </q-dialog>
   </div>
 </template>

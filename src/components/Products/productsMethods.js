@@ -1,7 +1,7 @@
-import { useProductsStore } from "stores/products";
-import { ref, computed, watch } from "vue";
-import { showNotification } from "src/Utilities/utils";
-import { useQuasar } from "quasar";
+import {useProductsStore} from "stores/products";
+import {ref, computed, watch} from "vue";
+import {showNotification} from "src/Utilities/utils";
+import {useQuasar} from "quasar";
 
 export default function productsMethods() {
   const productsStore = useProductsStore();
@@ -44,15 +44,16 @@ export default function productsMethods() {
 
   //Validate function
 
-  const btnAddProduct = (actionEdit = false) => {
+  const btnSaveProduct = (actionEdit = false, emitSuccess) => {
     addProductsFormRef.value?.validate().then((success) => {
       if (success) {
         submitting.value = true;
 
         if (actionEdit) {
-          updateProductAction();
+          updateProductAction(emitSuccess());
         } else {
-          addProductAction();
+          addProductAction(emitSuccess());
+
         }
       } else {
         showNotification($q, "negative", "Please fill the form");
@@ -62,13 +63,14 @@ export default function productsMethods() {
 
   // Calling Add product function from store
 
-  const addProductAction = () => {
+  const addProductAction = (emitSuccess) => {
     productsStore
       .addProducts(addProductsForm.value)
       .then(() => {
         submitting.value = false;
         showNotification($q, "positive", "Task Saved");
-        context.emit("success");
+        actionFetchProductsData();
+        emitSuccess();
       })
       .catch((err) => {
         submitting.value = false;
@@ -78,13 +80,14 @@ export default function productsMethods() {
 
   // Update Product function
 
-  const updateProductAction = () => {
+  const updateProductAction = (emitSuccess) => {
     productsStore
       .updateProducts(addProductsForm.value)
       .then(() => {
         submitting.value = false;
         showNotification($q, "positive", "Product Updated");
-        context.emit("success");
+        actionFetchProductsData();
+        emitSuccess();
       })
       .catch((err) => {
         submitting.value = false;
@@ -99,7 +102,7 @@ export default function productsMethods() {
     actionFetchProductsData,
     addProductsFormRef,
     addProductsForm,
-    btnAddProduct,
+    btnSaveProduct,
     submitting,
   };
 }

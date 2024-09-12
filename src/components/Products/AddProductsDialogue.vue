@@ -91,7 +91,7 @@
         :loading="submitting"
         :disabled="submitting"
         color="primary"
-        @click="btnAddProduct"
+        @click="btnSaveProduct(isEditing , emitSuccess)"
       />
     </q-card-actions>
   </q-card>
@@ -102,6 +102,10 @@
 
 import productsMethods from "components/Products/productsMethods";
 
-const { submitting, btnAddProduct, addProductsFormRef, addProductsForm } =
+const emits = defineEmits(['success'])
+const emitSuccess = () => emits('success')   // event emitting from child to parent
+const isEditing = false
+
+const { submitting, btnSaveProduct, addProductsFormRef, addProductsForm } =
   productsMethods();
 </script>

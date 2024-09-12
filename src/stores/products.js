@@ -37,7 +37,7 @@ export const useProductsStore = defineStore("products", {
     addProducts(form) {
       return new Promise((resolve, reject) => {
         api
-          .post("api/products/add", appendForm(form))
+          .post("products/add", appendForm(form))
           .then((response) => resolve(response))
           .catch((error) => reject(error));
       });
@@ -46,7 +46,7 @@ export const useProductsStore = defineStore("products", {
     updateProducts(form) {
       return new Promise((resolve, reject) => {
         api
-          .post(`set/${form.id}`, appendEditForm(form))
+          .post(`products/set/${form.id}`, appendEditForm(form))
           .then((response) => resolve(response))
           .catch((error) => reject(error));
       });

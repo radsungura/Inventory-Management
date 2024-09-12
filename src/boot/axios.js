@@ -1,7 +1,7 @@
 import { boot } from "quasar/wrappers";
 import axios from "axios";
 
-const baseURL = "http://localhost:4000/";
+const baseURL = "http://localhost:3000/api/";
 
 // Be careful when using SSR for cross-request state pollution
 // due to creating a Singleton instance here;
